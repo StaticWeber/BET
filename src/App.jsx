@@ -1,6 +1,9 @@
 import Home from "./Home";
-import { HashRouter, Routes, Route} from 'react-router-dom'
+import Game from "./Game";
+// import Historia from "./Historia";
+import { HashRouter, Routes, Route} from 'react-router-dom';
 
+ import './Game.css'
 
 function App(){
 
@@ -12,7 +15,8 @@ function App(){
         <Routes>
           
          <Route path="/" element={ <Home/>}/>
-        
+        <Route path="/game" element={ <Game/>}/>
+       {/* <Route path="/historia" element={<Historia/>}/> */}
 
        
         </Routes>

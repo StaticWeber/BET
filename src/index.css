@@ -1,7 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
 
+.nav-bar{
+    place-items: center;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
 
+.nav-bar ul{
+    list-style: none;
+}
 
+.nav-bar ul li{
+    display: inline-block;
+    margin-right: 2em;
+}
 
-
+.nav-bar ul li a{
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+}
 
 
