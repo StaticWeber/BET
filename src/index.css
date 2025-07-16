@@ -1,70 +1,8 @@
-
-
-
-
-
-
-
-/* Home styles */
-
-#main-div{
-   margin-top: 1em;
-}
-
-#page-logo{
-    color: red;
-    text-align: center;
-}
-
-.images{
-    width: 79em;
-    height: 100vh;
-}
-
-
-#comments{
-    margin-left: 1.5em;
-    text-align: center;
-}
-
-
-/* Home Page Styles */
-
-@media screen and (min-width: 320px) and (max-width: 359px){
-    
-.images{
-     width: 20em;
- }
-
-}
-
-
-
-
-@media screen and (min-width: 360px) and (max-width: 374px){
-    
-.images{
-        width: 22.4em;
-    }
-}
-
-
-
-@media screen and (min-width: 375px) and (max-width: 413px){
-    
-.images{
-        width: 23.3em;
-    }
-
-}
-
-
-@media screen and (min-width: 414px) and (max-width: 436px){
-    
-.images{
-        width: 25.7em;
-    }
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 
