@@ -1,6 +1,4 @@
 import Home from "./Home";
-// import Game from "./Game";
-import Historia from "./Historia";
 import { HashRouter, Routes, Route} from 'react-router-dom'
 
 
@@ -14,9 +12,8 @@ function App(){
         <Routes>
           
          <Route path="/" element={ <Home/>}/>
-        {/* <Route path="/game" element={ <Game/>}/> */}
-       <Route path="/historia" element={<Historia/>}/>
-      
+        
+
        
         </Routes>
 
