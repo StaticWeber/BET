@@ -193,10 +193,6 @@
 
 @media screen and (min-width: 320px) and (max-width: 359px){
 
-#cash-play{
-    background-color: green;
-}
-
 #level-container{
     top: 14em;
     left: 5em;
@@ -266,10 +262,6 @@
 
 
 @media screen and (min-width: 360px) and (max-width: 374px){
-
- #cash-play{
-    background-color: yellow;
-}   
 
 #level-container{
     top: 14em;
@@ -341,10 +333,6 @@
 
 
 @media screen and (min-width: 375px) and (max-width: 413px){
-
-#cash-play{
-    background-color: purple;
-}
 
 #level-container{
     top: 14em;
@@ -419,10 +407,6 @@
 
 @media screen and (min-width: 414px) and (max-width: 436px){
    
-#cash-play{
-    background-color: blue;
-}
-
 #level-container{
     top: 14em;
     left: 8em;
