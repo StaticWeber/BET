@@ -326,7 +326,7 @@ function Game(){
 
         setTimeout(() => {
          localStorage.removeItem('due');
-         window.location.href = '/#game';
+         window.location.href = '/BET';
         }, 20000);
 
         setTimeout(() => {
@@ -359,7 +359,7 @@ function Game(){
 
       setTimeout(() => {
          localStorage.removeItem('qualify');
-         window.location.href = '/#game';
+         window.location.href = '/BET';
         }, 20000);
 
       setTimeout(() => {
