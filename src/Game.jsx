@@ -25,9 +25,9 @@ function Game(){
   let [value, setValue] = useState(0);
   let [counter, setCounter] = useState(0);
 
-  //  useEffect(() => {
-  //   localStorage.clear();
-  //  }, []);
+   useEffect(() => {
+    localStorage.clear();
+   }, []);
   
   function userStatus(){
     if(localStorage.getItem('novice', 'user')){
