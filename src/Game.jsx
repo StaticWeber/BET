@@ -718,7 +718,7 @@ function Game(){
       </div>
 
         <div id="responsive-container" style={{ display: displayComponent3 }}>
-            <h1 id="game-logo">SICKER Game</h1>
+            <h1 id="game-logo">GUESS GAME</h1>
 
             <nav className="nav-bar">
 
