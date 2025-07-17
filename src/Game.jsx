@@ -20,15 +20,54 @@ function Game(){
   const [displayComponent10, setDisplayComponent10] = useState('none');
   const [displayComponent11, setDisplayComponent11] = useState('none');
   const [displayComponent12, setDisplayComponent12] = useState('none');
+  const [displayComponent13, setDisplayComponent13] = useState('none');
+  const [time, setTime] = useState(new Date());
 
 
   let [value, setValue] = useState(0);
   let [counter, setCounter] = useState(0);
+  let [limit, setLimit] = useState(0);
+
+  useEffect(() => {
+    const timer =setInterval(() => {
+      setTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer)
+  }, []);
+
+
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+  const seconds = time.getSeconds();
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+
+  const day = time.toLocaleString('default', { weekday: 'long' });
+  const date  = time.getDate();
+  const month = time.toLocaleString('default', { month: 'long' });
+  const year = time.getFullYear();
 
    useEffect(() => {
-    localStorage.clear();
+    localStorage.removeItem('novice');
+    localStorage.removeItem('amature');
+    localStorage.removeItem('master');
+    localStorage.removeItem('cash-displayed');
+    localStorage.removeItem('reward-displayed');
+    localStorage.removeItem('random-displayed');
+    localStorage.removeItem('bet-over');
+    localStorage.removeItem('hard-key');
+    localStorage.removeItem('medium-key');
+    localStorage.removeItem('easy-key');
+    localStorage.removeItem('cash-mode');
+    localStorage.removeItem('reward-mode');
+    localStorage.removeItem('bet-begin');
+    localStorage.removeItem('due');
+    localStorage.removeItem('qualify');
    }, []);
-  
+
+   
+
   function userStatus(){
     if(localStorage.getItem('novice', 'user')){
 
@@ -131,7 +170,26 @@ function Game(){
       localStorage.removeItem('bet-over');
       }, 6000);
 
-    } 
+    } if(localStorage.getItem('worse')){
+
+      setDisplayComponent13('inline');
+      setDisplayComponent7('none');
+      setDisplayComponent9('none');
+      localStorage.removeItem('reward-displayed')
+
+       setTimeout(() => {
+      setDisplayComponent6('inline');
+      setDisplayComponent13('none')
+     
+      }, 6000);
+
+
+      setTimeout(() => {
+        setLimit(0);
+        localStorage.removeItem('worse')
+      }, 86400000)
+       
+    }
     
   }
 
@@ -180,6 +238,7 @@ function Game(){
     }, 47000);
    
   }
+
   
 
   function RewardPlay(){
@@ -191,6 +250,35 @@ function Game(){
 
     localStorage.setItem('bet-begin', 'betStart');
     localStorage.removeItem('bet-over');
+
+    setLimit(limit += 1 );
+         console.log(limit);
+
+         if(limit === 0){
+           localStorage.setItem('initial', 'cards');
+
+         } if(limit === 1){
+          localStorage.removeItem('initial');
+          localStorage.setItem('good', 'cards');
+   
+        } if(limit === 2){
+          localStorage.setItem('better', 'cards');
+          localStorage.removeItem('good');
+
+        } if(limit === 3){
+          localStorage.setItem('best', 'cards');
+          localStorage.removeItem('better');
+          localStorage.removeItem('good');
+
+        } if(limit === 4){
+          localStorage.setItem('worse', 'cards')
+          localStorage.removeItem('best');
+          localStorage.removeItem('better');
+          localStorage.removeItem('good');
+          
+        }
+
+         
 
      setTimeout(() => {
        setDisplayComponent10('inline');
@@ -264,7 +352,7 @@ function Game(){
 
          setTimeout(() => {
           localStorage.removeItem('bet-over');
-          setDisplayComponent11('inline');
+          setDisplayComponent12('inline');
           setDisplayComponent6('none');
          }, 1800)
         
@@ -779,7 +867,7 @@ function Game(){
                 </div>
 
                 <div id="cash-subcontainer" style={{ display: displayComponent8 }} onClick={Cashplay} className="bet-displays">
-                  <p>Make a transfer to the Admin: 9161857413 Palmpay. A minimum of #500 or a maximum of #2000 
+                  <p>Make a transfer to the Admin: 9161857413 Palmpay. A minimum of #500 or a maximum of #1000 
                     <br/> Screenshot your transaction, play the game. <br/><br/>
                      Get a score of 450 or higher to double your cash.
                      Click to start</p>
@@ -814,6 +902,24 @@ function Game(){
                   screenshot of your screen and send it to the admin, then await your reward.</p> <br/>
                   <p>Proceed to admin below</p>
                   <button onClick={OpenWhatsapp}>Admin🤑</button>
+                </div>
+
+
+                 <div id="limit-container" style={{ display: displayComponent13 }} className="bet-displays">
+                  <p>You have reach your limit for today. Play again <br/> after the next 24hrs</p>
+                </div>
+                  
+
+                  <div id="date-container">
+                  <p id="date">
+                    {day}, {month} {date}, {year};
+                  </p>
+                 </div>
+
+                 <div id="time-container">
+                  <p>
+                    {formattedHours}:{minutes}:{seconds} {ampm};
+                  </p>
                 </div>
                 
         </div>

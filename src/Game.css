@@ -188,10 +188,32 @@
     left:32em;
 }
 
+#date-container{
+    position: absolute;
+    left: 35em;
+    top: 6em;
+}
+
+#time-container{
+    position: absolute;
+    left: 37em;
+}
+
+
 
 /* Game media */
 
 @media screen and (min-width: 320px) and (max-width: 359px){
+
+#time-container{
+    left: 7.5em;
+}
+
+#date-container{
+    position: absolute;
+    left: 5.2em;
+    top: 6em;
+}
 
 #level-container{
     top: 14em;
@@ -263,6 +285,16 @@
 
 @media screen and (min-width: 360px) and (max-width: 374px){
 
+#time-container{
+    left: 8.8em;
+}
+
+#date-container{
+    position: absolute;
+    left: 6em;
+    top: 6em;
+}
+
 #level-container{
     top: 14em;
     left: 6.5em;
@@ -333,6 +365,16 @@
 
 
 @media screen and (min-width: 375px) and (max-width: 413px){
+
+#time-container{
+    left: 9.2em;
+}
+
+#date-container{
+    position: absolute;
+    left: 6.6em;
+    top: 6em;
+}
 
 #level-container{
     top: 14em;
@@ -406,6 +448,16 @@
 
 
 @media screen and (min-width: 414px) and (max-width: 436px){
+
+#time-container{
+    left: 10.8em;
+}
+
+#date-container{
+    position: absolute;
+    left: 8.5em;
+    top: 6em;
+}
    
 #level-container{
     top: 14em;
