@@ -16,12 +16,17 @@ function Home(){
   const [react2, setReact2] = useState('');
   const [react3, setReact3] = useState('');
   const [react4, setReact4] = useState('');
+  const [display1, setDisplay1] = useState('none');
 
     useEffect(() => {
       
         setTimeout(() => {
-        window.alert('Discover inspirational quotes and images on this page');
-      }, 10000);
+        setDisplay1('inline')
+      }, 15000);
+
+        setTimeout(() => {
+        setDisplay1('none')
+      }, 25000);
 
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'white';
@@ -215,31 +220,39 @@ function Home(){
 
             <div id="main-div">
 
+              <div id="display1-container" style={{ display: display1 }} className='displays'>
+               <p>Discover inspirational quotes and images on this page.
+                  Like any picture by clicking on them.
+               </p>
+              </div>
+
+               <p>
+              Children are gifts from God.❤️❤️
+              </p>
               <img src={pic4} className="images" onClick={Reactor1}></img>
               <p className='reaction1' id="reaction1">{react1}</p>
-            <p>
-              Children are gifts from God.❤️❤️
+
+             <p>
+              Man best friend <br/> they say.❤️❤️
             </p>
 
             <img src={pic3} className="images" onClick={Reactor2}></img>
             <p className='reaction2' id="reaction2">{react2}</p>
+             
             <p>
-              Man best friend <br/> they say.❤️❤️
+              Inner beauty radiates <br/> the outward.❤️❤️
             </p>
-
             <img src={pic2} className="images" onClick={Reactor3}></img>
             <p className='reaction2' id="reaction3">{react3}</p>
-            <p>
-                Inner beauty radiates <br/> the outward.❤️❤️
-            </p>
+           
+             <p>
+               Black is always beautiful.❤️❤️
+             </p>
 
             <img src={pic1} className="images" onClick={Reactor4}></img>
             <p className='reaction2' id="reaction4">{react4}</p>
-            <p>
-               Black is always beautiful.❤️❤️
-            </p>
-
-
+            
+               
              </div>
             
             </div>

@@ -21,6 +21,7 @@ function Game(){
   const [displayComponent11, setDisplayComponent11] = useState('none');
   const [displayComponent12, setDisplayComponent12] = useState('none');
   const [displayComponent13, setDisplayComponent13] = useState('none');
+  const [displayComponent14, setDisplayComponent14] = useState('none');
   const [time, setTime] = useState(new Date());
 
 
@@ -34,6 +35,11 @@ function Game(){
     }, 1000);
     return () => clearInterval(timer)
   }, []);
+
+
+  setTimeout(() => {
+    setDisplayComponent14('inline')
+  }, 10000)
 
 
   const hours = time.getHours();
@@ -318,16 +324,19 @@ function Game(){
 
         setTimeout(() => {
         localStorage.removeItem('bet-over');
-        setDisplayComponent11('inline');
         setDisplayComponent6('none');
-     }, 1800)
+     }, 1500)
+
+       setTimeout(() => {
+       setDisplayComponent11('inline');
+     }, 7000)
        
 
 
-        setTimeout(() => {
-         localStorage.removeItem('due');
-         window.location.href = '/BET';
-        }, 20000);
+      setTimeout(() => {
+      localStorage.removeItem('due');
+      window.location.href = '/BET/#game';
+      }, 40000);
 
         setTimeout(() => {
    if(localStorage.getItem('hard-key') && localStorage.getItem('cash-mode') &&
@@ -352,15 +361,18 @@ function Game(){
 
          setTimeout(() => {
           localStorage.removeItem('bet-over');
-          setDisplayComponent12('inline');
           setDisplayComponent6('none');
-         }, 1800)
+         }, 1500);
+
+         setTimeout(() => {
+          setDisplayComponent12('inline');
+         }, 7000)
         
 
       setTimeout(() => {
          localStorage.removeItem('qualify');
-         window.location.href = '/BET';
-        }, 20000);
+         window.location.href = '/BET/#game';
+        }, 40000);
 
       setTimeout(() => {
    if(localStorage.getItem('medium-key') && localStorage.getItem('reward-mode') &&
@@ -828,7 +840,7 @@ function Game(){
             <div id="output-container">
                 <div className="box-container" style={{ display: displayComponent1 }}>
                   <h4 id="guide">Quick guide:<br/>Guess the next color.
-                  <br/> Avoid tapping one color box repeatedly.
+                  <br/>Tap at will👍.
                   <br/> How good can you guess? 😍
                   </h4>
                   <h4 className="box" id="red" onClick={Redfunction}></h4>
@@ -869,16 +881,16 @@ function Game(){
                 <div id="cash-subcontainer" style={{ display: displayComponent8 }} onClick={Cashplay} className="bet-displays">
                   <p>Make a transfer to the Admin: 9161857413 Palmpay. A minimum of #500 or a maximum of #1000 
                     <br/> Screenshot your transaction, play the game. <br/><br/>
-                     Get a score of 450 or higher to double your cash.
+                     Get a score of 450 to double your cash.
                      Click to start</p>
                 </div>
 
                  <div id="reward-subcontainer" style={{ display: displayComponent7 }} onClick={RewardPlay} className="bet-displays">
-                  <p>Get a score of 550 and above to win recharge cards of any network <br/> Click to start</p>
+                  <p>Get a score of 550 to win recharge cards of any network <br/> Click to start</p>
                  </div>
 
                 <div id="eligible-container" style={{ display: displayComponent9 }} className="bet-displays">
-                  <p>You must be a master to be eligible. <br/> Get a score of 350 or above at random gameplay to qualify.</p>
+                  <p>You must be a master to be eligible. <br/> Get a score of 350 at random gameplay to qualify.</p>
                 </div>
 
                 <div id="continue-container" style={{ display: displayComponent10 }} className="bet-displays">
@@ -890,6 +902,7 @@ function Game(){
                   screenshot of your screen and send it together with the screenshot
                   of your transaction to the admin, then await your reward.</p> <br/>
                   <p>Proceed to admin below</p>
+                   <p>PS. This message will expire after 40 seconds</p>
                   <button onClick={OpenWhatsapp}>Admin🤑</button>
                 </div>
 
@@ -900,7 +913,8 @@ function Game(){
                  <div id="congrats2-container" style={{ display: displayComponent12 }} className="bet-displays">
                   <p>Congratulations.🤝 <br/> Please take a
                   screenshot of your screen and send it to the admin, then await your reward.</p> <br/>
-                  <p>Proceed to admin below</p>
+                  <p>Proceed to admin below</p> <br/>
+                  <p>PS. This message will expire after 40 seconds</p>
                   <button onClick={OpenWhatsapp}>Admin🤑</button>
                 </div>
 
@@ -910,13 +924,13 @@ function Game(){
                 </div>
                   
 
-                  <div id="date-container">
+                  <div id="date-container" style={{ display: displayComponent14 }}>
                   <p id="date">
                     {day}, {month} {date}, {year};
                   </p>
                  </div>
 
-                 <div id="time-container">
+                 <div id="time-container" style={{ display: displayComponent14 }}>
                   <p>
                     {formattedHours}:{minutes}:{seconds} {ampm};
                   </p>

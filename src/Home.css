@@ -18,12 +18,27 @@
     text-align: center;
 }
 
+.displays{
+    border: solid, black;
+    color: black;
+    width: 17em;
+    padding: 0.5em;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em;
+    position: absolute;
+    top: 14em;
+    left:32em;
+}
+
 
 @media screen and (min-width: 320px) and (max-width: 359px){
     
 .images{
      width: 20em;
  }
+
+.displays{
+    left: 1.5em;
+}
 
 }
 
@@ -35,6 +50,10 @@
 .images{
         width: 22.4em;
     }
+
+.displays{
+    left: 2.9em;
+}
 }
 
 
@@ -45,6 +64,9 @@
         width: 23.3em;
     }
 
+.displays{
+    left: 3.6em;
+}
 }
 
 
@@ -53,5 +75,9 @@
 .images{
         width: 25.7em;
     }
+
+.displays{
+    left: 5.2em;
+}
 
 }

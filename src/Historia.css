@@ -18,6 +18,17 @@
     text-align: center;
 }
 
+.displays{
+    border: solid, black;
+    color: black;
+    width: 17em;
+    padding: 0.5em;
+    box-shadow: 0.1em 0.1em 0.1em 0.1em;
+    position: absolute;
+    top: 14em;
+    left:32em;
+}
+
 
 /* Home Page Styles */
 
@@ -26,6 +37,10 @@
 .images{
      width: 20em;
  }
+
+.displays{
+    left: 1.5em;
+}
 
 }
 
@@ -37,6 +52,10 @@
 .images{
         width: 22.4em;
     }
+
+.displays{
+    left: 2.9em;
+}
 }
 
 
@@ -47,6 +66,11 @@
         width: 23.3em;
     }
 
+
+.displays{
+    left: 3.6em;
+}
+
 }
 
 
@@ -56,4 +80,7 @@
         width: 25.7em;
     }
 
+.displays{
+    left: 5.2em;
+}
 }
