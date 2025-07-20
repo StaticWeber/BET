@@ -15,18 +15,25 @@ function Historia(){
 
   const [display1, setDisplay1] = useState('none');
    
-     useEffect(() => {
-            setTimeout(() => {
-            setDisplay1('inline')
-            }, 15000);
+    useEffect(() => {
+      
+     setInterval(() => {
+      setTimeout(() => {
+      setDisplay1('inline')
+      }, 10000);
 
-           setTimeout(() => {
-           setDisplay1('none')
-          }, 25000);
-           
-            document.body.style.backgroundColor = 'black';
-            document.body.style.color = 'white';
-          }, []);
+      setTimeout(() => {
+      setDisplay1('none')
+      }, 15000);
+
+      }, 40000);
+
+    });
+
+     useEffect(() => {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
+    }, []);
 
     return(
           <div id="historia-container">

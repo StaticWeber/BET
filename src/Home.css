@@ -19,13 +19,14 @@
 }
 
 .displays{
-    border: solid, black;
+    border: solid;
+    background-color: white;
     color: black;
     width: 17em;
     padding: 0.5em;
     box-shadow: 0.1em 0.1em 0.1em 0.1em;
-    position: absolute;
-    top: 14em;
+    position: fixed;
+    top: 25em;
     left:32em;
 }
 

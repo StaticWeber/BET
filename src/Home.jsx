@@ -18,18 +18,26 @@ function Home(){
   const [react4, setReact4] = useState('');
   const [display1, setDisplay1] = useState('none');
 
-    useEffect(() => {
+
+     useEffect(() => {
       
-        setTimeout(() => {
-        setDisplay1('inline')
+     setInterval(() => {
+      setTimeout(() => {
+      setDisplay1('inline')
+      }, 10000);
+
+      setTimeout(() => {
+      setDisplay1('none')
       }, 15000);
 
-        setTimeout(() => {
-        setDisplay1('none')
-      }, 25000);
+      }, 40000);
 
-        document.body.style.backgroundColor = 'black';
-        document.body.style.color = 'white';
+    });
+
+
+    useEffect(() => {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
       }, []);
 
     useEffect(() => {
