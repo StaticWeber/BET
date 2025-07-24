@@ -204,7 +204,7 @@
 
 /* Game media */
 
-@media screen and (min-width: 320px) and (max-width: 359px){
+@media screen and (min-width: 320px) and (max-width: 360px){
 
 #time-container{
     left: 7.5em;
@@ -284,7 +284,7 @@
 
 
 
-@media screen and (min-width: 360px) and (max-width: 374px){
+@media screen and (min-width: 360px) and (max-width: 375px){
 
 #time-container{
     left: 8.8em;
@@ -365,7 +365,7 @@
 
 
 
-@media screen and (min-width: 375px) and (max-width: 413px){
+@media screen and (min-width: 375px) and (max-width: 414px){
 
 #time-container{
     left: 9.2em;

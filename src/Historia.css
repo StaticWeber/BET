@@ -31,9 +31,11 @@
 }
 
 
-/* Home Page Styles */
 
-@media screen and (min-width: 320px) and (max-width: 359px){
+
+/* Historia Page Styles */
+
+@media screen and (min-width: 320px) and (max-width: 360px){
     
 .images{
      width: 20em;
@@ -48,7 +50,7 @@
 
 
 
-@media screen and (min-width: 360px) and (max-width: 374px){
+@media screen and (min-width: 360px) and (max-width: 375px){
     
 .images{
         width: 22.4em;
@@ -61,7 +63,7 @@
 
 
 
-@media screen and (min-width: 375px) and (max-width: 413px){
+@media screen and (min-width: 375px) and (max-width: 414px){
     
 .images{
         width: 23.3em;
